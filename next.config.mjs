@@ -27,11 +27,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cfqpdjpvzgkvpipainzp.supabase.co; frame-ancestors 'none';"
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://cfqpdjpvzgkvpipainzp.supabase.co; frame-ancestors 'self' https://huggingface.co https://*.hf.space;"
           },
           {
             key: 'X-Content-Type-Options',
