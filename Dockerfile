@@ -19,11 +19,10 @@ ENV NODE_ENV=production \
     PORT=7860 \
     HOSTNAME="0.0.0.0"
 
-# Create non-root user with UID 1000 for Hugging Face Spaces compatibility
-RUN adduser -D -u 1000 user && \
-    chown -R user:user /app
+# Change ownership to pre-existing 'node' user (UID 1000) included in node:22-alpine
+RUN chown -R node:node /app
 
-USER user
+USER node
 
 EXPOSE 7860
 
